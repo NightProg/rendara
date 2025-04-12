@@ -35,7 +35,6 @@ public class World {
 
     public <T extends Component> T getComponent(Class<T> component) {
         for (Entity entity : entities) {
-            java.lang.System.out.println(entity);
             if (entity.hasComponent(component)) {
                 return entity.getComponent(component);
             }

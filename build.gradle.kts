@@ -7,7 +7,7 @@ group = "org.rendara"
 version = "1.0-SNAPSHOT"
 
 val lwjglVersion = "3.3.4"
-val lwjglNatives = "natives-macos"
+val lwjglNatives = "natives-linux"
 
 repositories {
     mavenCentral()
@@ -35,7 +35,6 @@ dependencies {
 
 application {
     mainClass.set("org.rendara.Main")
-    applicationDefaultJvmArgs = listOf("-XstartOnFirstThread")
 }
 
 tasks.test {

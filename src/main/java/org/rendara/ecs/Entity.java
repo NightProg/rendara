@@ -48,6 +48,7 @@ public class Entity {
 
 
     public void render(World world) {
+
     }
 
     public void startup(World world) {

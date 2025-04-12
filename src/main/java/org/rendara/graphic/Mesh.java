@@ -32,42 +32,42 @@ public class Mesh extends Entity {
         this.vboId = GL33.glGenBuffers();
         this.iboId = GL33.glGenBuffers();
         this.vertexCount = indices.length;
-//        GL33.glBindBuffer(GL33.GL_ARRAY_BUFFER, vboId);
-//        GL33.glBufferData(GL33.GL_ARRAY_BUFFER, vertices, GL33.GL_STATIC_DRAW);
-//        GL33.glVertexAttribPointer(0, 3, GL33.GL_FLOAT, false, 8 * Float.BYTES, 0);
-//        GL33.glEnableVertexAttribArray(0);
-//        GL33.glVertexAttribPointer(1, 3, GL33.GL_FLOAT, false, 8 * Float.BYTES, 3 * Float.BYTES);
-//        GL33.glEnableVertexAttribArray(1);
-//        GL33.glVertexAttribPointer(2, 2, GL33.GL_FLOAT, false, 8 * Float.BYTES, 6 * Float.BYTES);
-//        GL33.glEnableVertexAttribArray(2);
-//        GL33.glBindBuffer(GL33.GL_ARRAY_BUFFER, 0);
-//        GL33.glBindBuffer(GL33.GL_ELEMENT_ARRAY_BUFFER, iboId);
-//        GL33.glBufferData(GL33.GL_ELEMENT_ARRAY_BUFFER, indices, GL33.GL_STATIC_DRAW);
-//        GL33.glBindVertexArray(0);
-//        GL33.glBindVertexArray(vaoId);
-//        FloatBuffer vertexBuffer = BufferUtils.createFloatBuffer(vertices.length);
-//        vertexBuffer.put(vertices).flip();
-//        GL33.glBindBuffer(GL33.GL_ARRAY_BUFFER, vboId);
-//        GL33.glBufferData(GL33.GL_ARRAY_BUFFER, vertexBuffer, GL33.GL_STATIC_DRAW);
-//
-//        IntBuffer indexBuffer = BufferUtils.createIntBuffer(indices.length);
-//        indexBuffer.put(indices).flip();
-//
-//        GL33.glBindBuffer(GL33.GL_ELEMENT_ARRAY_BUFFER, iboId);
-//        GL33.glBufferData(GL33.GL_ELEMENT_ARRAY_BUFFER, indexBuffer, GL33.GL_STATIC_DRAW);
-//
-//        int stride = 8 * Float.BYTES;
-//        GL33.glVertexAttribPointer(0, 3, GL33.GL_FLOAT, false, stride, 0); // Position
-//        GL33.glEnableVertexAttribArray(0);
-//
-//        GL33.glVertexAttribPointer(1, 3, GL33.GL_FLOAT, false, stride, 3 * Float.BYTES); // Normale
-//        GL33.glEnableVertexAttribArray(1);
-//
-//        GL33.glVertexAttribPointer(2, 2, GL33.GL_FLOAT, false, stride, 6 * Float.BYTES); // UV
-//        GL33.glEnableVertexAttribArray(2);
-//
-//        GL33.glBindBuffer(GL33.GL_ARRAY_BUFFER, 0);
-//        GL33.glBindVertexArray(0);
+        GL33.glBindBuffer(GL33.GL_ARRAY_BUFFER, vboId);
+        GL33.glBufferData(GL33.GL_ARRAY_BUFFER, vertices, GL33.GL_STATIC_DRAW);
+        GL33.glVertexAttribPointer(0, 3, GL33.GL_FLOAT, false, 8 * Float.BYTES, 0);
+        GL33.glEnableVertexAttribArray(0);
+        GL33.glVertexAttribPointer(1, 3, GL33.GL_FLOAT, false, 8 * Float.BYTES, 3 * Float.BYTES);
+        GL33.glEnableVertexAttribArray(1);
+        GL33.glVertexAttribPointer(2, 2, GL33.GL_FLOAT, false, 8 * Float.BYTES, 6 * Float.BYTES);
+        GL33.glEnableVertexAttribArray(2);
+        GL33.glBindBuffer(GL33.GL_ARRAY_BUFFER, 0);
+        GL33.glBindBuffer(GL33.GL_ELEMENT_ARRAY_BUFFER, iboId);
+        GL33.glBufferData(GL33.GL_ELEMENT_ARRAY_BUFFER, indices, GL33.GL_STATIC_DRAW);
+        GL33.glBindVertexArray(0);
+        GL33.glBindVertexArray(vaoId);
+        FloatBuffer vertexBuffer = BufferUtils.createFloatBuffer(vertices.length);
+        vertexBuffer.put(vertices).flip();
+        GL33.glBindBuffer(GL33.GL_ARRAY_BUFFER, vboId);
+        GL33.glBufferData(GL33.GL_ARRAY_BUFFER, vertexBuffer, GL33.GL_STATIC_DRAW);
+
+        IntBuffer indexBuffer = BufferUtils.createIntBuffer(indices.length);
+        indexBuffer.put(indices).flip();
+
+        GL33.glBindBuffer(GL33.GL_ELEMENT_ARRAY_BUFFER, iboId);
+        GL33.glBufferData(GL33.GL_ELEMENT_ARRAY_BUFFER, indexBuffer, GL33.GL_STATIC_DRAW);
+
+        int stride = 8 * Float.BYTES;
+        GL33.glVertexAttribPointer(0, 3, GL33.GL_FLOAT, false, stride, 0); // Position
+        GL33.glEnableVertexAttribArray(0);
+
+        GL33.glVertexAttribPointer(1, 3, GL33.GL_FLOAT, false, stride, 3 * Float.BYTES); // Normale
+        GL33.glEnableVertexAttribArray(1);
+
+        GL33.glVertexAttribPointer(2, 2, GL33.GL_FLOAT, false, stride, 6 * Float.BYTES); // UV
+        GL33.glEnableVertexAttribArray(2);
+
+        GL33.glBindBuffer(GL33.GL_ARRAY_BUFFER, 0);
+        GL33.glBindVertexArray(0);
 
         GL33.glBindVertexArray(vaoId);
         GL33.glBindBuffer(GL33.GL_ARRAY_BUFFER, vboId);

@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Application {
-    HashMap<SystemEvent, List<System>> systems;
+    Hashmap<SystemEvent, List<System>> systems;
     AppLogger logger = new AppLogger(Application.class);
     World world;
 
